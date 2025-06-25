@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Month Name Converter</title>
+</head>
+<body>
+  <h3>Enter Month Number (1–12):</h3>
+  <input type="text" id="monthInput" title="Enter a number between 1 and 12" placeholder="e.g., 5">
+  <button onclick="showMonth()">Get Month Name</button>
+  <p id="monthName"></p>
+
+  <script>
+
+    const getMonthName = (function() {
+      const months = [
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+      ];
+
+
+      return function(num) {
+        const n = parseInt(num);
+        if (isNaN(n) || n < 1 || n > 12) {
+          return "Bad Number";
+        }
+        return months[n - 1]; 
+      };
+    
+    })();
+
+    function showMonth() {
+      const input = document.getElementById("monthInput").value;
+      const result = getMonthName(input);
+      document.getElementById("monthName").innerText = result;
+    
+    }
+  </script>
+</body>
+</html>
