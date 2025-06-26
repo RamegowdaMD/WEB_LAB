@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="react/react.development.js"></script>
+    <script src="react/react-dom.development.js"></script>
+    <script src="react/prop-types.js"></script>
+    <script src="react/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+        function Qa()
+        {
+            const [data , setData] = React.useState({
+                name : "Ram",
+                address:"ben",
+                com:"google"
+            })
+
+            function handleChange()
+            {
+                setData(
+                    {
+                        ...data,
+                        address:"che",
+                        name:"suj"
+                    }
+                );
+            }
+            return(
+                <div>
+                <h1>{data.name} {data.address} {data.com}</h1>
+                <button onClick={handleChange}>Change</button>
+                </div>
+            )
+        }
+
+        ReactDOM.render(<Qa/> , document.getElementById('root'));
+    </script>
+</body>
+</html>

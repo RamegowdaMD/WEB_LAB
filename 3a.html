@@ -4,7 +4,9 @@
   <title>Student Academic Data</title>
 </head>
 <body>
+
   <h2>Enter Student Details</h2>
+  
   <form id="studentForm">
     <input type="text" id="usn" placeholder="USN" required><br><br>
     <input type="text" id="subCode" placeholder="Subject Code" required><br><br>
@@ -36,7 +38,7 @@
     }
 
     document.getElementById('studentForm').addEventListener('submit', function (e) {
-      e.preventDefault();
+      e.preventDefault()
 
       const usn = document.getElementById('usn').value;
       const subCode = document.getElementById('subCode').value;

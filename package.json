@@ -2,7 +2,6 @@
     "name":"vowel-counter",
     "version":"1.0.0",
     "main":"8a.js",
-    "type": "module",
     "scripts": {
         "start":"node 8a.js"
     }

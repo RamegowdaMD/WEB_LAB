@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attendance Form</title>
+</head>
+<body>
+    <h1>Student Attendance Entry</h1>
+    <form action="/submit" method="POST">
+        <label>Name: </label>
+        <input type="text" name="name" required><br><br>
+        <label>USN: </label>
+        <input type="text" name="usn" required><br><br>
+        <label>Department: </label>
+        <input type="text" name="dept" required><br><br>
+        <label>Attendance (%): </label>
+        <input type="number" name="attendance" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+    <a href="/details">View Not Eligible Students</a>
+</body>
+</html>

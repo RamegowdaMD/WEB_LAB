@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Student Entry Form</title>
+  </head>
+  <body>
+    <h2>Student Data Entry</h2>
+    
+    <form action="/submit" method="POST">
+      <label>Student ID:</label><br />
+      <input type="text" name="id" required /><br /><br />
+
+      <label>Name:</label><br />
+      <input type="text" name="name" required /><br /><br />
+
+      <label>Subject:</label><br />
+      <input type="text" name="subject" required /><br /><br />
+
+      <label>Marks:</label><br />
+      <input type="number" name="marks" required /><br /><br />
+
+      <input type="submit" value="Submit" />
+    </form>
+
+    <br />
+    <a href="/not-eligible">View Not Eligible Students</a>
+  </body>
+</html>
